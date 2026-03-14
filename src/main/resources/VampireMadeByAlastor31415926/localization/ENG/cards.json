@@ -1,0 +1,7 @@
+{
+  "Strike": { 
+    "NAME": "Strike", 
+    "DESCRIPTION": "deal !D! damage.", 
+    "UPGRADE_DESCRIPTION": "deal !D! damage!" 
+  }
+}

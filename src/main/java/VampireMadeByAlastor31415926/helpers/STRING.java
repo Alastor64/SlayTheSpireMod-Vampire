@@ -1,14 +1,17 @@
 package VampireMadeByAlastor31415926.helpers;
 
 public class STRING {
+    public static String getModPrefix() {
+        return "VampireMadeByAlastor31415926";
+    }
     public static String makeID(String ID) {
-        return "VampireMadeByAlastor31415926:" + ID;
+        return getModPrefix()+":" + ID;
     }
 
     public static String getIMG_PATH() {
-        return "VampireMadeByAlastor31415926/img/cards/";
+        return getModPrefix()+"/img/cards/";
     }
     public static String makeIMG_PATH(String ID) {
-        return "VampireMadeByAlastor31415926/img/cards/"+ID+".png";
+        return getModPrefix()+"/img/cards/"+ID+".png";
     }
 }
