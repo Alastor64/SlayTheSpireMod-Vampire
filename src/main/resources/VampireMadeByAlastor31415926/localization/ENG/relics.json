@@ -1,0 +1,9 @@
+{
+  "VampireMadeByAlastor31415926:Teeth": { 
+    "NAME": "Teeth", 
+    "FLAVOR":"ababa",
+    "DESCRIPTIONS":[
+       "on hit,gain 5 life"
+    ]
+  }
+}

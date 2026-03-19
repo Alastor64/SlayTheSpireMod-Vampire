@@ -14,4 +14,7 @@ public class STRING {
     public static String makeIMG_PATH(String ID) {
         return getModPrefix()+"/img/cards/"+ID+".png";
     }
+    public static String makeIMG_PATH(String ID,String TYPE) {
+        return getModPrefix()+"/img/"+TYPE+"/"+ID+".png";
+    }
 }

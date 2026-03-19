@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 
 import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
@@ -13,13 +14,16 @@ import VampireMadeByAlastor31415926.characters.MyCharacter;
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.COLOR_BLOOD;
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.MY_CHARACTER;
 import VampireMadeByAlastor31415926.helpers.STRING;
+import VampireMadeByAlastor31415926.relics.Teeth;
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 
 @SpireInitializer 
-public class core implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber{
+public class core implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber{
     public core() {        
         BaseMod.subscribe(this);
         BaseMod.addColor(COLOR_BLOOD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR,BG_ATTACK_512,BG_SKILL_512,BG_POWER_512,ENEYGY_ORB,BG_ATTACK_1024,BG_SKILL_1024,BG_POWER_1024,BIG_ORB,SMALL_ORB);
@@ -49,8 +53,16 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
         }
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 STRING.getModPrefix() + "/localization/" + lang + "/cards.json");
-    BaseMod.loadCustomStringsFile(CharacterStrings.class, STRING.getModPrefix()+"/localization/" + lang + "/characters.json");
-            }
+        BaseMod.loadCustomStringsFile(CharacterStrings.class,
+                STRING.getModPrefix() + "/localization/" + lang + "/characters.json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class,
+                STRING.getModPrefix() + "/localization/" + lang + "/relics.json");
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelic(new Teeth(), RelicType.SHARED);
+        }
     
     public static final Color MY_COLOR = new Color(136.0F / 255.0F, 0F, 21.0F / 225.0F, 0.8F);
      private static final String MY_CHARACTER_BUTTON = STRING.getModPrefix()+"/img/char/Character_Button.png";
