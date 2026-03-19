@@ -3,5 +3,10 @@
     "NAME": "打击", 
     "DESCRIPTION": "造成 !D! 点伤害。", 
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害！" 
+  },
+  "Indiscretion": { 
+    "NAME": "失态", 
+    "DESCRIPTION": "抽三，易损", 
+    "UPGRADE_DESCRIPTION": "抽三" 
   }
 }

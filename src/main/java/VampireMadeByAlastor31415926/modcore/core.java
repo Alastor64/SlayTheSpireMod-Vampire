@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 
+import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
 import VampireMadeByAlastor31415926.characters.MyCharacter;
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.COLOR_BLOOD;
@@ -19,7 +20,7 @@ import basemod.interfaces.EditStringsSubscriber;
 
 @SpireInitializer 
 public class core implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber{
-    public core() {
+    public core() {        
         BaseMod.subscribe(this);
         BaseMod.addColor(COLOR_BLOOD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR,BG_ATTACK_512,BG_SKILL_512,BG_POWER_512,ENEYGY_ORB,BG_ATTACK_1024,BG_SKILL_1024,BG_POWER_1024,BIG_ORB,SMALL_ORB);
     }
@@ -37,6 +38,7 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new Strike());
+        BaseMod.addCard(new Indiscretion());
     }
 
     @Override

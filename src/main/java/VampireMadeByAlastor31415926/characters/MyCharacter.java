@@ -20,10 +20,12 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
+import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
 import VampireMadeByAlastor31415926.helpers.STRING;
 import VampireMadeByAlastor31415926.modcore.core;
 import basemod.abstracts.CustomPlayer;
+import basemod.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.MaxHandSizePatch;
 
 public class MyCharacter extends CustomPlayer {
     
@@ -83,22 +85,26 @@ public class MyCharacter extends CustomPlayer {
     }
 
     // 初始卡组的ID，可直接写或引用变量
+    @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         for(int x = 0; x<5; x++) {
             retVal.add(Strike.ID);
         }
-        retVal.add(Strike.ID);
+        retVal.add(Indiscretion.ID);
         return retVal;
     }
 
+    
     // 初始遗物的ID，可以先写个原版遗物凑数
+    @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Vajra.ID);
         return retVal;
     }
 
+    @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字

@@ -3,5 +3,10 @@
     "NAME": "Strike", 
     "DESCRIPTION": "deal !D! damage.", 
     "UPGRADE_DESCRIPTION": "deal !D! damage!" 
+  },
+  "Indiscretion": { 
+    "NAME": "Indiscretion", 
+    "DESCRIPTION": "draw 3 cards,gain 1 Vulnerable", 
+    "UPGRADE_DESCRIPTION": "draw 3 cards" 
   }
 }
