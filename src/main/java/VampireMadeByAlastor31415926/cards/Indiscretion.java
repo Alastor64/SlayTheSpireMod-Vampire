@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.COLOR_BLOOD;
 import VampireMadeByAlastor31415926.helpers.STRING;
+import VampireMadeByAlastor31415926.powers.DelayedVulnerable;
 import basemod.abstracts.CustomCard;
 
 public class Indiscretion extends CustomCard{
@@ -39,6 +40,9 @@ public class Indiscretion extends CustomCard{
     @Override
     public void use(AbstractPlayer p,AbstractMonster m) {
         this.addToBot(new DrawCardAction(DRAWCARDSNUMBER));
-        if(!this.upgraded)this.addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p,VULNERABLENUMBER,false)));
+        if (!this.upgraded)
+            this.addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, VULNERABLENUMBER, false)));
+        else 
+            this.addToBot(new ApplyPowerAction(p, p, new DelayedVulnerable(p, VULNERABLENUMBER)));
     }
 }

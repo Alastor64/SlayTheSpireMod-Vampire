@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
 import VampireMadeByAlastor31415926.cards.Indiscretion;
@@ -57,15 +58,17 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
                 STRING.getModPrefix() + "/localization/" + lang + "/characters.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class,
                 STRING.getModPrefix() + "/localization/" + lang + "/relics.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class,
+                STRING.getModPrefix() + "/localization/" + lang + "/powers.json");
     }
 
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new Teeth(), RelicType.SHARED);
-        }
+    }
     
     public static final Color MY_COLOR = new Color(136.0F / 255.0F, 0F, 21.0F / 225.0F, 0.8F);
-     private static final String MY_CHARACTER_BUTTON = STRING.getModPrefix()+"/img/char/Character_Button.png";
+    private static final String MY_CHARACTER_BUTTON = STRING.getModPrefix()+"/img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = STRING.getModPrefix()+"/img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = STRING.getModPrefix()+"/img/512/bg_attack_512.png";
     private static final String BG_POWER_512 = STRING.getModPrefix()+"/img/512/bg_power_512.png";

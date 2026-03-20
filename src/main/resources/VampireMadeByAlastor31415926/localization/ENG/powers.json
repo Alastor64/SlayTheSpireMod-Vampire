@@ -1,0 +1,9 @@
+{
+  "DelayedVulnerable": { 
+    "NAME": "DelayedVulnerable", 
+    "DESCRIPTIONS":[
+       "next turn gain ",
+       " Vulnerable"
+    ]
+  }
+}

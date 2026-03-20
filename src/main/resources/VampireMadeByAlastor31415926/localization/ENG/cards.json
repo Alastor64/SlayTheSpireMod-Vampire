@@ -7,6 +7,6 @@
   "Indiscretion": { 
     "NAME": "Indiscretion", 
     "DESCRIPTION": "draw 3 cards,gain 1 Vulnerable", 
-    "UPGRADE_DESCRIPTION": "draw 3 cards" 
+    "UPGRADE_DESCRIPTION": "draw 3 cards,gain 1 Vulnerable next turn" 
   }
 }

@@ -3,7 +3,7 @@
     "NAME": "Teeth", 
     "FLAVOR":"ababa",
     "DESCRIPTIONS":[
-       "on hit,gain 5 life"
+       "on kill,gain 5 life"
     ]
   }
 }

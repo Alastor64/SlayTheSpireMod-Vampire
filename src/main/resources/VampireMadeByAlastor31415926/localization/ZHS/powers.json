@@ -1,0 +1,9 @@
+{
+  "DelayedVulnerable": { 
+    "NAME": "易伤延迟", 
+    "DESCRIPTIONS":[
+       "下回合获得",
+       "层易伤"
+    ]
+  }
+}

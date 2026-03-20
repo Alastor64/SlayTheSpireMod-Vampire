@@ -7,6 +7,6 @@
   "Indiscretion": { 
     "NAME": "失态", 
     "DESCRIPTION": "抽三，易损", 
-    "UPGRADE_DESCRIPTION": "抽三" 
+    "UPGRADE_DESCRIPTION": "抽三,下回合易损" 
   }
 }

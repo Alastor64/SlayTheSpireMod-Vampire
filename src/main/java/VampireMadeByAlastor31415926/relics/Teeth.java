@@ -18,6 +18,7 @@ public class Teeth extends CustomRelic{
 
     public Teeth() {
         super(ID, ImageMaster.loadImage(IMG_PATH), RELIC_TIER, LANDING_SOUND);
+        // this.cost = 666;
     }
     
     @Override
