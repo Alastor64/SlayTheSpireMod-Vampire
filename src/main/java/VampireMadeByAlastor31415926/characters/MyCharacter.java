@@ -25,7 +25,6 @@ import VampireMadeByAlastor31415926.cards.Strike;
 import VampireMadeByAlastor31415926.helpers.STRING;
 import VampireMadeByAlastor31415926.modcore.core;
 import basemod.abstracts.CustomPlayer;
-import basemod.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.MaxHandSizePatch;
 
 public class MyCharacter extends CustomPlayer {
     

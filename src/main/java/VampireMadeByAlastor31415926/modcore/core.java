@@ -1,7 +1,9 @@
 package VampireMadeByAlastor31415926.modcore;
 
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -25,7 +27,12 @@ import basemod.interfaces.EditStringsSubscriber;
 
 @SpireInitializer 
 public class core implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber{
-    public core() {        
+    public static class CardTagsEnum {
+        @SpireEnum
+        public static AbstractCard.CardTags BLOOD_FEAST;
+    }
+    
+    public core() {
         BaseMod.subscribe(this);
         BaseMod.addColor(COLOR_BLOOD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR,BG_ATTACK_512,BG_SKILL_512,BG_POWER_512,ENEYGY_ORB,BG_ATTACK_1024,BG_SKILL_1024,BG_POWER_1024,BIG_ORB,SMALL_ORB);
     }
