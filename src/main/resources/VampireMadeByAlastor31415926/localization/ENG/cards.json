@@ -4,6 +4,11 @@
     "DESCRIPTION": "deal !D! damage.", 
     "UPGRADE_DESCRIPTION": "deal !D! damage!" 
   },
+  "Defend": { 
+    "NAME": "Defend", 
+    "DESCRIPTION": "gain !B! block.", 
+    "UPGRADE_DESCRIPTION": "gain !B! block!" 
+  },
   "Indiscretion": { 
     "NAME": "Indiscretion", 
     "DESCRIPTION": "draw 3 cards,gain 1 Vulnerable", 

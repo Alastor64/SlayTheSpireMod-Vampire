@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
+import VampireMadeByAlastor31415926.cards.Defend;
 import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
 import VampireMadeByAlastor31415926.characters.MyCharacter;
@@ -50,6 +51,7 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new Strike());
+        BaseMod.addCard(new Defend());
         BaseMod.addCard(new Indiscretion());
     }
 

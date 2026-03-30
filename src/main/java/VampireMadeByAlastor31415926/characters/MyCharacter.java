@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
+import VampireMadeByAlastor31415926.cards.Defend;
 import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
 import VampireMadeByAlastor31415926.helpers.STRING;
@@ -87,8 +88,11 @@ public class MyCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<5; x++) {
+        for (int x = 0; x < 5; x++) {
             retVal.add(Strike.ID);
+        }
+        for (int x = 0; x < 3; x++) {
+            retVal.add(Defend.ID);
         }
         retVal.add(Indiscretion.ID);
         return retVal;

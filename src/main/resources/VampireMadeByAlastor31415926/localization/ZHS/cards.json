@@ -4,6 +4,11 @@
     "DESCRIPTION": "造成 !D! 点伤害。", 
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害！" 
   },
+  "Defend": { 
+    "NAME": "防御", 
+    "DESCRIPTION": "获得 !B! 点格挡。", 
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。" 
+  },
   "Indiscretion": { 
     "NAME": "失态", 
     "DESCRIPTION": "抽三，易损", 
