@@ -23,31 +23,32 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import VampireMadeByAlastor31415926.cards.Defend;
 import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
+import VampireMadeByAlastor31415926.cards.ThickBlood;
 import VampireMadeByAlastor31415926.helpers.STRING;
 import VampireMadeByAlastor31415926.modcore.core;
 import basemod.abstracts.CustomPlayer;
 
 public class MyCharacter extends CustomPlayer {
-    
+
     // 火堆的人物立绘（行动前）
-    private static final String MY_CHARACTER_SHOULDER_1 = STRING.getModPrefix()+"/img/char/shoulder1.png";
+    private static final String MY_CHARACTER_SHOULDER_1 = STRING.getModPrefix() + "/img/char/shoulder1.png";
     // 火堆的人物立绘（行动后）
-    private static final String MY_CHARACTER_SHOULDER_2 = STRING.getModPrefix()+"/img/char/shoulder2.png";
+    private static final String MY_CHARACTER_SHOULDER_2 = STRING.getModPrefix() + "/img/char/shoulder2.png";
     // 人物死亡图像
-    private static final String CORPSE_IMAGE = STRING.getModPrefix()+"/img/char/corpse.png";
+    private static final String CORPSE_IMAGE = STRING.getModPrefix() + "/img/char/corpse.png";
     // 战斗界面左下角能量图标的每个图层
     private static final String[] ORB_TEXTURES = new String[]{
-            STRING.getModPrefix()+"/img/UI/orb/layer5.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer4.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer3.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer2.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer1.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer6.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer5d.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer4d.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer3d.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer2d.png",
-            STRING.getModPrefix()+"/img/UI/orb/layer1d.png"
+        STRING.getModPrefix() + "/img/UI/orb/layer5.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer4.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer3.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer2.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer1.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer6.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer5d.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer4d.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer3d.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer2d.png",
+        STRING.getModPrefix() + "/img/UI/orb/layer1d.png"
     };
     // 每个图层的旋转速度
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
@@ -55,17 +56,15 @@ public class MyCharacter extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("MyCharacter");
 
     public MyCharacter(String name) {
-        super(name, PlayerColorEnum.MY_CHARACTER,ORB_TEXTURES,STRING.getModPrefix()+"/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
-
+        super(name, PlayerColorEnum.MY_CHARACTER, ORB_TEXTURES, STRING.getModPrefix() + "/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
 
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
         this.dialogY = (this.drawY + 150.0F * Settings.scale);
 
-
         // 初始化你的人物，如果你的人物只有一张图，那么第一个参数填写你人物图片的路径。
         this.initializeClass(
-                STRING.getModPrefix()+"/img/char/character.png", // 人物图片
+                STRING.getModPrefix() + "/img/char/character.png", // 人物图片
                 MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1,
                 CORPSE_IMAGE, // 人物死亡图像
                 this.getLoadout(),
@@ -74,14 +73,11 @@ public class MyCharacter extends CustomPlayer {
                 new EnergyManager(3) // 初始每回合的能量
         );
 
-
         // 如果你的人物没有动画，那么这些不需要写
         // this.loadAnimation("ExampleModResources/img/char/character.atlas", "ExampleModResources/img/char/character.json", 1.8F);
         // AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         // e.setTime(e.getEndTime() * MathUtils.random());
         // e.setTimeScale(1.2F);
-
-
     }
 
     // 初始卡组的ID，可直接写或引用变量
@@ -95,10 +91,10 @@ public class MyCharacter extends CustomPlayer {
             retVal.add(Defend.ID);
         }
         retVal.add(Indiscretion.ID);
+        retVal.add(ThickBlood.ID);
         return retVal;
     }
 
-    
     // 初始遗物的ID，可以先写个原版遗物凑数
     @Override
     public ArrayList<String> getStartingRelics() {
@@ -171,9 +167,9 @@ public class MyCharacter extends CustomPlayer {
     public ArrayList<CutscenePanel> getCutscenePanels() {
         ArrayList<CutscenePanel> panels = new ArrayList<>();
         // 有两个参数的，第二个参数表示出现图片时播放的音效
-        panels.add(new CutscenePanel(STRING.getModPrefix()+"/img/char/Victory1.png", "ATTACK_MAGIC_FAST_1"));
-        panels.add(new CutscenePanel(STRING.getModPrefix()+"/img/char/Victory2.png"));
-        panels.add(new CutscenePanel(STRING.getModPrefix()+"/img/char/Victory3.png"));
+        panels.add(new CutscenePanel(STRING.getModPrefix() + "/img/char/Victory1.png", "ATTACK_MAGIC_FAST_1"));
+        panels.add(new CutscenePanel(STRING.getModPrefix() + "/img/char/Victory2.png"));
+        panels.add(new CutscenePanel(STRING.getModPrefix() + "/img/char/Victory3.png"));
         return panels;
     }
 
@@ -226,10 +222,10 @@ public class MyCharacter extends CustomPlayer {
     }
 
     // 以下为原版人物枚举、卡牌颜色枚举扩展的枚举，需要写，接下来要用
-
     // 注意此处是在 MyCharacter 类内部的静态嵌套类中定义的新枚举值
     // 不可将该定义放在外部的 MyCharacter 类中，具体原因见《高级技巧 / 01 - Patch / SpireEnum》
     public static class PlayerColorEnum {
+
         // 修改为你的颜色名称，确保不会与其他mod冲突
         @SpireEnum
         public static PlayerClass MY_CHARACTER;

@@ -1,17 +1,25 @@
 {
-  "Strike": { 
-    "NAME": "Strike", 
-    "DESCRIPTION": "deal !D! damage.", 
-    "UPGRADE_DESCRIPTION": "deal !D! damage!" 
+  "Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "deal !D! damage!"
   },
-  "Defend": { 
-    "NAME": "Defend", 
-    "DESCRIPTION": "gain !B! block.", 
-    "UPGRADE_DESCRIPTION": "gain !B! block!" 
+  "Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "gain !B! block.",
+    "UPGRADE_DESCRIPTION": "gain !B! block!"
   },
-  "Indiscretion": { 
-    "NAME": "Indiscretion", 
-    "DESCRIPTION": "draw 3 cards,gain 1 Vulnerable", 
-    "UPGRADE_DESCRIPTION": "draw 3 cards,gain 1 Vulnerable next turn" 
+  "Indiscretion": {
+    "NAME": "Indiscretion",
+    "DESCRIPTION": "draw 3 cards,gain 1 Vulnerable",
+    "UPGRADE_DESCRIPTION": "draw 3 cards,gain 1 Vulnerable next turn"
+  },
+  "ThickBlood": {
+    "EXTENDED_DESCRIPTION": [
+      "foolish"
+    ],
+    "NAME": "ThickBlood",
+    "DESCRIPTION": " Retain NL  BloodFeast",
+    "UPGRADE_DESCRIPTION": "On  Exhaust draw one card NL  Retain NL  BloodFeast"
   }
 }

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import VampireMadeByAlastor31415926.cards.Defend;
 import VampireMadeByAlastor31415926.cards.Indiscretion;
 import VampireMadeByAlastor31415926.cards.Strike;
+import VampireMadeByAlastor31415926.cards.ThickBlood;
 import VampireMadeByAlastor31415926.characters.MyCharacter;
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.COLOR_BLOOD;
 import static VampireMadeByAlastor31415926.characters.MyCharacter.PlayerColorEnum.MY_CHARACTER;
@@ -26,16 +27,18 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 
-@SpireInitializer 
-public class core implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber{
+@SpireInitializer
+public class core implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber {
+
     public static class CardTagsEnum {
+
         @SpireEnum
         public static AbstractCard.CardTags BLOOD_FEAST;
     }
-    
+
     public core() {
         BaseMod.subscribe(this);
-        BaseMod.addColor(COLOR_BLOOD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR,BG_ATTACK_512,BG_SKILL_512,BG_POWER_512,ENEYGY_ORB,BG_ATTACK_1024,BG_SKILL_1024,BG_POWER_1024,BIG_ORB,SMALL_ORB);
+        BaseMod.addColor(COLOR_BLOOD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENEYGY_ORB, BG_ATTACK_1024, BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
     }
 
     public static void initialize() {
@@ -45,14 +48,15 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
     @Override
     public void receiveEditCharacters() {
         // 向basemod注册人物
-        BaseMod.addCharacter(new MyCharacter(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT,MY_CHARACTER);
+        BaseMod.addCharacter(new MyCharacter(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT, MY_CHARACTER);
     }
-    
+
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new Indiscretion());
+        BaseMod.addCard(new ThickBlood());
     }
 
     @Override
@@ -75,17 +79,17 @@ public class core implements EditCardsSubscriber,EditStringsSubscriber,EditChara
     public void receiveEditRelics() {
         BaseMod.addRelic(new Teeth(), RelicType.SHARED);
     }
-    
+
     public static final Color MY_COLOR = new Color(136.0F / 255.0F, 0F, 21.0F / 225.0F, 0.8F);
-    private static final String MY_CHARACTER_BUTTON = STRING.getModPrefix()+"/img/char/Character_Button.png";
-    private static final String MY_CHARACTER_PORTRAIT = STRING.getModPrefix()+"/img/char/Character_Portrait.png";
-    private static final String BG_ATTACK_512 = STRING.getModPrefix()+"/img/512/bg_attack_512.png";
-    private static final String BG_POWER_512 = STRING.getModPrefix()+"/img/512/bg_power_512.png";
-    private static final String BG_SKILL_512 = STRING.getModPrefix()+"/img/512/bg_skill_512.png";
-    private static final String SMALL_ORB = STRING.getModPrefix()+"/img/char/small_orb.png";
-    private static final String BG_ATTACK_1024 = STRING.getModPrefix()+"/img/1024/bg_attack.png";
-    private static final String BG_POWER_1024 = STRING.getModPrefix()+"/img/1024/bg_power.png";
-    private static final String BG_SKILL_1024 = STRING.getModPrefix()+"/img/1024/bg_skill.png";
-    private static final String BIG_ORB = STRING.getModPrefix()+"/img/char/card_orb.png";
-    private static final String ENEYGY_ORB = STRING.getModPrefix()+"/img/char/cost_orb.png";
+    private static final String MY_CHARACTER_BUTTON = STRING.getModPrefix() + "/img/char/Character_Button.png";
+    private static final String MY_CHARACTER_PORTRAIT = STRING.getModPrefix() + "/img/char/Character_Portrait.png";
+    private static final String BG_ATTACK_512 = STRING.getModPrefix() + "/img/512/bg_attack_512.png";
+    private static final String BG_POWER_512 = STRING.getModPrefix() + "/img/512/bg_power_512.png";
+    private static final String BG_SKILL_512 = STRING.getModPrefix() + "/img/512/bg_skill_512.png";
+    private static final String SMALL_ORB = STRING.getModPrefix() + "/img/char/small_orb.png";
+    private static final String BG_ATTACK_1024 = STRING.getModPrefix() + "/img/1024/bg_attack.png";
+    private static final String BG_POWER_1024 = STRING.getModPrefix() + "/img/1024/bg_power.png";
+    private static final String BG_SKILL_1024 = STRING.getModPrefix() + "/img/1024/bg_skill.png";
+    private static final String BIG_ORB = STRING.getModPrefix() + "/img/char/card_orb.png";
+    private static final String ENEYGY_ORB = STRING.getModPrefix() + "/img/char/cost_orb.png";
 }

@@ -1,17 +1,25 @@
 {
-  "Strike": { 
-    "NAME": "打击", 
-    "DESCRIPTION": "造成 !D! 点伤害。", 
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害！" 
+  "Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害！"
   },
-  "Defend": { 
-    "NAME": "防御", 
-    "DESCRIPTION": "获得 !B! 点格挡。", 
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。" 
+  "Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。"
   },
-  "Indiscretion": { 
-    "NAME": "失态", 
-    "DESCRIPTION": "抽三，易损", 
-    "UPGRADE_DESCRIPTION": "抽三,下回合易损" 
+  "Indiscretion": {
+    "NAME": "失态",
+    "DESCRIPTION": "抽三，易损",
+    "UPGRADE_DESCRIPTION": "抽三,下回合易损"
+  },
+  "ThickBlood": {
+    "EXTENDED_DESCRIPTION": [
+      "愚蠢"
+    ],
+    "NAME": "粘稠之血",
+    "DESCRIPTION": " 保留 NL  血宴",
+    "UPGRADE_DESCRIPTION": "被  消耗 时，抽一 NL  保留 NL  血宴"
   }
 }
