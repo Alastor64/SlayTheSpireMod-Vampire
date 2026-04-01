@@ -3,23 +3,24 @@ package VampireMadeByAlastor31415926.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import VampireMadeByAlastor31415926.helpers.MyCard;
-import VampireMadeByAlastor31415926.helpers.STRING;
 import VampireMadeByAlastor31415926.powers.DelayedVulnerable;
 
-public class Indiscretion extends MyCard{
+public class Indiscretion extends MyCard {
+
     private static final int VULNERABLENUMBER = 1;
     private static final int DRAWCARDSNUMBER = 3;
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(Indiscretion.class.getSimpleName());
-    public static final String ID=STRING.makeID(Indiscretion.class.getSimpleName());
+    private static final CardStrings CARD_STRINGS = getCardString(Indiscretion.class);
+    public static final String ID = getID(Indiscretion.class);
+
     public Indiscretion() {
-        super(Indiscretion.class.getSimpleName(),CARD_STRINGS,0,CardRarity.UNCOMMON, CardType.SKILL);
+        super(Indiscretion.class.getSimpleName(), CARD_STRINGS, 0, CardRarity.UNCOMMON, CardType.SKILL);
     }
+
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -28,12 +29,14 @@ public class Indiscretion extends MyCard{
             this.initializeDescription();
         }
     }
+
     @Override
-    public void use(AbstractPlayer p,AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DrawCardAction(DRAWCARDSNUMBER));
-        if (!this.upgraded)
+        if (!this.upgraded) {
             this.addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, VULNERABLENUMBER, false)));
-        else 
+        } else {
             this.addToBot(new ApplyPowerAction(p, p, new DelayedVulnerable(p, VULNERABLENUMBER)));
+        }
     }
 }
